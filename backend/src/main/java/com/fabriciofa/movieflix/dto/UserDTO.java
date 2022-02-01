@@ -1,8 +1,5 @@
 package com.fabriciofa.movieflix.dto;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.fabriciofa.movieflix.entities.User;
 
 public class UserDTO {
@@ -10,8 +7,6 @@ public class UserDTO {
 	private Long id;
 	private String name;
 	private String email;
-
-	private Set<RoleDTO> roles = new HashSet<>();
 
 	public UserDTO() {
 	
@@ -27,7 +22,6 @@ public class UserDTO {
 		id = entity.getId();
 		name = entity.getName();
 		email = entity.getEmail();
-		entity.getRoles().forEach(role -> roles.add(new RoleDTO(role)));
 	}
 
 	public Long getId() {
@@ -52,9 +46,5 @@ public class UserDTO {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public Set<RoleDTO> getRoles() {
-		return roles;
 	}
 }
