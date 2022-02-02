@@ -26,5 +26,4 @@ public class ReviewController {
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
 		return ResponseEntity.created(uri).body(newDto);
 	}
-
 }

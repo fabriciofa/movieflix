@@ -1,8 +1,5 @@
 package com.fabriciofa.movieflix.dto;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.fabriciofa.movieflix.entities.Movie;
 
 public class MovieDTO {
@@ -14,23 +11,21 @@ public class MovieDTO {
 	private String imgUrl;
 	private String synopsis;
 	
-	private Long genreId;
-	
-	private List<ReviewDTO> reviews = new ArrayList<>();
+	private GenreDTO genre;
 
 	public MovieDTO() {
 	
 	}
 
 	public MovieDTO(Long id, String title, String subtitle, Integer year, String imgUrl, String synopsis,
-			Long genreId) {
+			GenreDTO genre) {
 		this.id = id;
 		this.title = title;
 		this.subtitle = subtitle;
 		this.year = year;
 		this.imgUrl = imgUrl;
 		this.synopsis = synopsis;
-		this.genreId = genreId;
+		this.genre = genre;
 	}
 
 	public MovieDTO(Movie entity) {
@@ -40,8 +35,7 @@ public class MovieDTO {
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
 		synopsis = entity.getSynopsis();
-		genreId = entity.getGenre().getId();
-		entity.getReviews().forEach(review -> reviews.add(new ReviewDTO(review)));;
+		genre = new GenreDTO(entity.getGenre());
 	}
 
 	public Long getId() {
@@ -92,15 +86,11 @@ public class MovieDTO {
 		this.synopsis = synopsis;
 	}
 
-	public Long getGenreId() {
-		return genreId;
+	public GenreDTO getGenre() {
+		return genre;
 	}
 
-	public void setGenreId(Long genreId) {
-		this.genreId = genreId;
-	}
-
-	public List<ReviewDTO> getReviews() {
-		return reviews;
+	public void setGenre(GenreDTO genre) {
+		this.genre = genre;
 	}
 }

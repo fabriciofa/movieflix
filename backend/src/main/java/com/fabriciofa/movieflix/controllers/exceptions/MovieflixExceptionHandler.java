@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.fabriciofa.movieflix.services.exceptions.ResourceNotFoundException;
-import com.fabriciofa.movieflix.services.exceptions.UnauthorizedException;
 
 @ControllerAdvice
 public class MovieflixExceptionHandler {
