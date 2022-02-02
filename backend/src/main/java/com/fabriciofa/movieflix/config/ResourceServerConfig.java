@@ -17,7 +17,6 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	private static final String PUBLIC[] = { "/oauth/token", "/h2-console/**" };
 	private static final String MEMBER_POST[] = { "/reviews/**" };
-	
 
 	@Autowired
 	private JwtTokenStore tokenStore;

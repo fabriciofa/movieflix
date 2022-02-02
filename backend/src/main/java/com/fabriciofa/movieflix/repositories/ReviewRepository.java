@@ -11,5 +11,4 @@ import com.fabriciofa.movieflix.entities.Review;
 public interface ReviewRepository extends JpaRepository<Review, Long> {
 
 	List<Review> findMovieById(Long id);
-
 }

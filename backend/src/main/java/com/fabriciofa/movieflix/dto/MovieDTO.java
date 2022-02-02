@@ -6,7 +6,7 @@ public class MovieDTO {
 
 	private Long id;
 	private String title;
-	private String subtitle;
+	private String subTitle;
 	private Integer year;
 	private String imgUrl;
 	private String synopsis;
@@ -21,7 +21,7 @@ public class MovieDTO {
 			GenreDTO genre) {
 		this.id = id;
 		this.title = title;
-		this.subtitle = subtitle;
+		this.subTitle = subtitle;
 		this.year = year;
 		this.imgUrl = imgUrl;
 		this.synopsis = synopsis;
@@ -31,7 +31,7 @@ public class MovieDTO {
 	public MovieDTO(Movie entity) {
 		id = entity.getId();
 		title = entity.getTitle();
-		subtitle = entity.getSubTitle();
+		subTitle = entity.getSubTitle();
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
 		synopsis = entity.getSynopsis();
@@ -54,12 +54,12 @@ public class MovieDTO {
 		this.title = title;
 	}
 
-	public String getSubtitle() {
-		return subtitle;
-	}
+public String getSubTitle() {
+	return subTitle;
+}
 
-	public void setSubtitle(String subtitle) {
-		this.subtitle = subtitle;
+	public void setSubTitle(String subtitle) {
+		this.subTitle = subtitle;
 	}
 
 	public Integer getYear() {

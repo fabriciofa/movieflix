@@ -1,10 +1,14 @@
 package com.fabriciofa.movieflix.dto;
 
+import javax.validation.constraints.NotBlank;
+
 import com.fabriciofa.movieflix.entities.Review;
 
 public class ReviewDTO {
 
 	private Long id;
+	
+	@NotBlank(message = "O campo não pode ser vazio")
 	private String text;
 	private Long movieId;
 	private UserDTO user;
