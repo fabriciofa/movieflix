@@ -1,9 +1,10 @@
-import './App.css';
+import Routes from "./Routes";
+
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
-  return (
-    <h1>Movieflix</h1>
-  );
+  return <Routes />;
 }
 
 export default App;
